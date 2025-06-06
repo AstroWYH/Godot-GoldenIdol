@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://r5elhr5ylxtu"]
+
+[ext_resource type="Texture2D" uid="uid://canujjt0jwhpo" path="res://asset/Golden.png" id="1_wgwml"]
+[ext_resource type="Script" uid="uid://dsdsfkgr44gg" path="res://scene/start_button.gd" id="2_ry1uq"]
+[ext_resource type="Texture2D" uid="uid://rf7603w6lh4k" path="res://asset/frame_spech_green.png" id="3_fb1ex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgwml"]
+size = Vector2(249, 121)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fb1ex"]
+font_size = 30
+
+[node name="MainScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_wgwml")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(990, 251)
+shape = SubResource("RectangleShape2D_wgwml")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1106.0
+offset_top = 372.0
+offset_right = 1302.0
+offset_bottom = 438.0
+text = "开始游戏"
+script = ExtResource("2_ry1uq")
+
+[node name="WelcomeUI" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 965.0
+offset_top = 176.0
+offset_right = 1418.0
+offset_bottom = 307.0
+texture = ExtResource("3_fb1ex")
+
+[node name="WelcomeText" type="Label" parent="WelcomeUI"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 20.0
+offset_right = 409.0
+offset_bottom = 113.0
+text = "晚上做游戏：
+    你好，欢迎你来冒险！"
+label_settings = SubResource("LabelSettings_fb1ex")
