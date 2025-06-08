@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcnchpsnocnjp"]
+
+[ext_resource type="Script" uid="uid://clekrjlu4c3og" path="res://scene/pop_ui.gd" id="1_bye6g"]
+[ext_resource type="Texture2D" uid="uid://jok376p5dq4f" path="res://asset/frame_transparent_blue_small.png" id="1_v8bsk"]
+[ext_resource type="Texture2D" uid="uid://bvvy8kk5tvx3c" path="res://asset/btn_0000_close_idle.png" id="2_s47bm"]
+
+[node name="PopUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bye6g")
+
+[node name="PopUIRect" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 200.0
+texture = ExtResource("1_v8bsk")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="PopUIRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.202627, 0.0589161, 0.149517, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseBtn" type="TextureButton" parent="PopUIRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -66.0
+offset_bottom = 66.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_s47bm")
+metadata/_edit_use_anchors_ = true
