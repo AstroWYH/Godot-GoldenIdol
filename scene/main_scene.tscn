@@ -24,7 +24,7 @@ visible = false
 position = Vector2(990, 251)
 shape = SubResource("RectangleShape2D_wgwml")
 
-[node name="Button" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 offset_left = 1106.0
 offset_top = 372.0
 offset_right = 1302.0
