@@ -33,14 +33,26 @@ layout_mode = 2
 color = Color(0.202627, 0.0589161, 0.149517, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="Text" type="RichTextLabel" parent="PopUIRect/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "[fill]这是一个支持[b]粗体[/b]、[i]斜体[/i]、[u]下划线[/u]的多行文本。[/fill]
+[color=#000000]红色文字[/color]
+[img=20]res://asset/btn_0000_close_idle.png[/img] 内嵌图片
+[url=https://www.bilibili.com]访问官网[/url]
+[url=event://open_popup]触发本地事件[/url]"
+
 [node name="CloseBtn" type="TextureButton" parent="PopUIRect"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -66.0
-offset_bottom = 66.0
+offset_left = -30.0
+offset_bottom = 30.0
 grow_horizontal = 0
 texture_normal = ExtResource("2_s47bm")
+ignore_texture_size = true
+stretch_mode = 0
 metadata/_edit_use_anchors_ = true
