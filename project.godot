@@ -18,6 +18,10 @@ boot_splash/image="uid://cnr0to1rjnpmv"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=500
 
+[autoload]
+
+FloatMessage="*res://scene/float_message.gd"
+
 [display]
 
 window/size/viewport_width=1920
