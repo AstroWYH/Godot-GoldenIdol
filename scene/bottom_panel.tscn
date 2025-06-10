@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlthy4hh6p4vc"]
 
 [ext_resource type="Texture2D" uid="uid://5xgi4fw1bf34" path="res://asset/frame_new_ui.png" id="1_ni3ml"]
-[ext_resource type="Script" uid="uid://jw6xpd76adux" path="res://scene/bottom_panel.gd" id="1_nq3li"]
+[ext_resource type="Script" uid="uid://jw6xpd76adux" path="res://scripts/bottom_panel.gd" id="1_nq3li"]
 [ext_resource type="Theme" uid="uid://cd6xcm0r6ceqx" path="res://asset/btn_round.tres" id="2_4yapw"]
-[ext_resource type="Texture2D" uid="uid://yqi1nm7qfr5t" path="res://shared/ui/buttons/btn_0043_dropdown_idle.png" id="4_ecss8"]
-[ext_resource type="Texture2D" uid="uid://cft86numd1b1s" path="res://shared/ui/buttons/btn_0044_dropdown_mouseover.png" id="5_bxxlc"]
-[ext_resource type="Texture2D" uid="uid://c0ahp503qeset" path="res://shared/ui/buttons/btn_0045_dropdown_pressed.png" id="5_pfqcv"]
+[ext_resource type="Texture2D" uid="uid://yqi1nm7qfr5t" path="res://asset/buttons/btn_0043_dropdown_idle.png" id="4_ecss8"]
+[ext_resource type="Texture2D" uid="uid://cft86numd1b1s" path="res://asset/buttons/btn_0044_dropdown_mouseover.png" id="5_bxxlc"]
+[ext_resource type="Texture2D" uid="uid://c0ahp503qeset" path="res://asset/buttons/btn_0045_dropdown_pressed.png" id="5_pfqcv"]
 
 [node name="BottomPanel" type="Control"]
 layout_mode = 3

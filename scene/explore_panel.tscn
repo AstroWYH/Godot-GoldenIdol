@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://kuu5yuqbb3jy"]
+
+[ext_resource type="Script" uid="uid://bijacm62n8nox" path="res://scripts/explore_panel.gd" id="1_l1y2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1y2r"]
+
+[node name="ExplorePanel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l1y2r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="StoryPanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/StoryPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/StoryPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.602595, 0.520961, 0.862256, 1)
+theme_override_font_sizes/font_size = 40
+text = "卷轴的填写尚未完成"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/StoryPanel/VBoxContainer"]
+modulate = Color(0.730984, 0.642534, 0.188478, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_l1y2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="FillStory" type="RichTextLabel" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "星期六的下午"
+
+[node name="CharacterPanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/CharacterPanel"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/CharacterPanel/ScrollContainer"]
+layout_mode = 2
+
+[node name="CluePanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/CluePanel"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/CluePanel/ScrollContainer"]
+layout_mode = 2

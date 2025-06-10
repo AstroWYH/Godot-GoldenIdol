@@ -20,7 +20,8 @@ boot_splash/minimum_display_time=500
 
 [autoload]
 
-FloatMessage="*res://scene/float_message.gd"
+GFloatMessage="*res://scripts/global/g_float_message.gd"
+GGameUi="*res://scripts/global/g_game_ui.gd"
 
 [display]
 

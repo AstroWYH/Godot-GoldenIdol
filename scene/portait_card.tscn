@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ulhc35v0uwdw"]
 
 [ext_resource type="Texture2D" uid="uid://didld0rqradjv" path="res://asset/eve_beach.png" id="1_3gq14"]
-[ext_resource type="Script" uid="uid://dqaabmiswfifk" path="res://scene/portait_card.gd" id="1_40fqk"]
+[ext_resource type="Script" uid="uid://dqaabmiswfifk" path="res://scripts/portait_card.gd" id="1_40fqk"]
 [ext_resource type="Texture2D" uid="uid://pcpuhm2e2bqs" path="res://asset/phrase_red.png" id="2_40fqk"]
 
 [node name="PortaitCard" type="Control"]

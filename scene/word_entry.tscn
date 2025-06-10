@@ -1,22 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp0y2be6x2u4w"]
+[gd_scene load_steps=3 format=3 uid="uid://dp0y2be6x2u4w"]
 
-[ext_resource type="Script" uid="uid://b3pv7b8bjbxad" path="res://scene/word_entry.gd" id="1_lofbt"]
+[ext_resource type="Script" uid="uid://b3pv7b8bjbxad" path="res://scripts/word_entry.gd" id="1_lofbt"]
+[ext_resource type="Theme" uid="uid://cd6xcm0r6ceqx" path="res://asset/btn_round.tres" id="2_3xf8u"]
 
 [node name="WordEntry" type="Button"]
+modulate = Color(0.277543, 0.739883, 0.743914, 1)
+custom_minimum_size = Vector2(150, 40)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1820.0
-offset_bottom = -1060.0
+offset_right = -1770.0
+offset_bottom = -1040.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lofbt")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 20.0
-theme_override_font_sizes/font_size = 11
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_3xf8u")
+theme_override_font_sizes/font_size = 20
 text = "词条"
 horizontal_alignment = 1
 vertical_alignment = 1

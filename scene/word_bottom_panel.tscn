@@ -1,28 +1,35 @@
-[gd_scene format=3 uid="uid://dtkxgvumgd4fw"]
+[gd_scene load_steps=2 format=3 uid="uid://dtkxgvumgd4fw"]
 
-[node name="WordBottomPanel" type="Control"]
-layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
+[ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="1_cks08"]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
+[node name="WordBottomPanel" type="PanelContainer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -960.0
-offset_top = -200.0
+offset_top = -150.0
 offset_right = 960.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 2
-columns = 10
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.627451, 0.988235, 0.627451, 0.188235)
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 12
+
+[node name="WordEntry" parent="Grid" instance=ExtResource("1_cks08")]
+layout_mode = 2
+
+[node name="WordEntry2" parent="Grid" instance=ExtResource("1_cks08")]
+layout_mode = 2
