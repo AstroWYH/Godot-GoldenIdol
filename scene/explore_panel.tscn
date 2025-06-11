@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://kuu5yuqbb3jy"]
+[gd_scene load_steps=4 format=3 uid="uid://kuu5yuqbb3jy"]
 
 [ext_resource type="Script" uid="uid://bijacm62n8nox" path="res://scripts/explore_panel.gd" id="1_l1y2r"]
+[ext_resource type="PackedScene" uid="uid://buiaogge8ue8j" path="res://scene/flow_story_container.tscn" id="2_qqthb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1y2r"]
 
@@ -45,11 +46,11 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="FillStory" type="RichTextLabel" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer"]
-unique_name_in_owner = true
+[node name="HFlowContainer" type="HFlowContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-text = "星期六的下午"
+
+[node name="FlowStoryContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer" instance=ExtResource("2_qqthb")]
+layout_mode = 2
 
 [node name="CharacterPanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
