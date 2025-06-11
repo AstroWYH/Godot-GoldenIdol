@@ -1,6 +1,6 @@
 extends Node
 
-func show_float_message(text: String, duration: float = 2.0):
+func show(text: String, duration: float = 2.0):
 	var popup = PopupPanel.new()
 	var label = Label.new()
 	label.text = text

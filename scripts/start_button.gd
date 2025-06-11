@@ -7,10 +7,6 @@ func _ready():
 	pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():
-	print("按钮被点击了！")
-	# welcome_ui.visible = not welcome_ui.visible
-	explore_panel.visible = not explore_panel.visible
-	
 	var tween = create_tween()
 	if welcome_ui.visible:
 		tween.tween_property(welcome_ui, "modulate:a", 0.0, 0.3)

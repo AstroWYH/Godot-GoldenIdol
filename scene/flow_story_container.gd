@@ -3,25 +3,25 @@ extends HFlowContainer
 # 本地化数据暂时直接写在字典里，不用外部json读取
 var localization_data := {
 	"zh": {
-		"sentence": "在[PLACE1]，[PERSON1]把毒药放入了[ITEM1]，而[PERSON2]则在[PLACE2]偷走了[ITEM2]。",
+		"sentence": "在[PLACE_1]，[PERSON_1]把毒药放入了[ITEM_1]，而[PERSON_2]则在[PLACE_2]偷走了[ITEM_2]。",
 		"entries": {
-			"PERSON1": "仆人甲",
-			"PERSON2": "仆人乙",
-			"ITEM1": "红酒",
-			"ITEM2": "毒药瓶",
-			"PLACE1": "餐厅",
-			"PLACE2": "书房"
+			"PERSON_1": "仆人甲",
+			"PERSON_2": "仆人乙",
+			"ITEM_1": "红酒",
+			"ITEM_2": "毒药瓶",
+			"PLACE_1": "餐厅",
+			"PLACE_2": "书房"
 		}
 	},
 	"en": {
-		"sentence": "At the [PLACE1], [PERSON1] put the poison into the [ITEM1], while [PERSON2] stole the [ITEM2] in the [PLACE2].",
+		"sentence": "At the [PLACE_1], [PERSON_1] put the poison into the [ITEM_1], while [PERSON_2] stole the [ITEM_2] in the [PLACE_2].",
 		"entries": {
-			"PERSON1": "Servant A",
-			"PERSON2": "Servant B",
-			"ITEM1": "wine",
-			"ITEM2": "poison vial",
-			"PLACE1": "dining room",
-			"PLACE2": "study"
+			"PERSON_1": "Servant A",
+			"PERSON_2": "Servant B",
+			"ITEM_1": "wine",
+			"ITEM_2": "poison vial",
+			"PLACE_1": "dining room",
+			"PLACE_2": "study"
 		}
 	}
 }
@@ -38,7 +38,7 @@ func parse_text_to_nodes(container: FlowContainer, text: String, locale: String)
 	for child in container.get_children():
 		child.queue_free()
 	
-	var pattern := r"\[([A-Z_0-9]+)\]"  # 允许占位符包含数字，如 PERSON1
+	var pattern := r"\[([A-Z_0-9]+)\]"  # 允许占位符包含数字，如 PERSON_1
 	var regex := RegEx.new()
 	regex.compile(pattern)
 
