@@ -22,6 +22,7 @@ boot_splash/minimum_display_time=500
 
 GFloatMessage="*res://scripts/global/g_float_message.gd"
 GGameUi="*res://scripts/global/g_game_ui.gd"
+GEnum="*res://scripts/global/g_game_enum.gd"
 
 [display]
 

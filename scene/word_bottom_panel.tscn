@@ -30,6 +30,8 @@ columns = 12
 
 [node name="WordEntry" parent="Grid" instance=ExtResource("1_cks08")]
 layout_mode = 2
+extern_label = "红酒"
 
 [node name="WordEntry2" parent="Grid" instance=ExtResource("1_cks08")]
 layout_mode = 2
+extern_label = "摩根"

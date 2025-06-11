@@ -25,9 +25,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "一行数据一行"
 
-[node name="WordEntry" parent="." instance=ExtResource("1_yh6ql")]
-layout_mode = 2
-
 [node name="WordEntry2" parent="." instance=ExtResource("1_yh6ql")]
 layout_mode = 2
 
