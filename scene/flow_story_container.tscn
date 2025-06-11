@@ -30,15 +30,12 @@ layout_mode = 2
 
 [node name="WordEntry2" parent="." instance=ExtResource("1_yh6ql")]
 layout_mode = 2
-label = "新词条"
 
 [node name="WordEntry3" parent="." instance=ExtResource("1_yh6ql")]
 layout_mode = 2
-label = "摩根"
 
 [node name="WordEntry4" parent="." instance=ExtResource("1_yh6ql")]
 layout_mode = 2
-label = "不会"
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 2

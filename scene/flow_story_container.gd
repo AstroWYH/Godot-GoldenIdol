@@ -18,7 +18,7 @@ var localization_data := {
 	}
 }
 
-var font_size := 26
+@export var font_size := 26
 
 # 示例调用：你可以在 _ready() 或按钮点击后触发
 func _ready():

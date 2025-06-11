@@ -64,3 +64,4 @@ func _on_animation_finished(word_entry: Node):
 	#grid_container.add_child(word_entry)
 	# 可选：重置本地位置以适应 GridContainer 的自动布局
 	# word_entry.position = Vector2.ZERO
+	
