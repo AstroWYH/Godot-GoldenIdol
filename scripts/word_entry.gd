@@ -21,13 +21,13 @@ func _on_button_pressed():
 func set_label(in_label: String) -> void:
 	b_use_extern_label = false
 	%Label.text = in_label # 这里不用%会出错，因为外面调set_label时，还没执行ready
-	
+
 func toggle_label_visibility(b_open: bool) -> void:
 	if b_open:
 		%Label.show()
 	else:
 		%Label.hide()
-	
+
 func set_key(key: String):
 	word_key = key
 
@@ -43,13 +43,12 @@ func _get_drag_data(position):
 		return drag_data
 	else:
 		return null
-	
+
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	if word_type == GEnum.EWordPlace.Bottom:
 		return false
 	return true
-	
+
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	if data.text == label.text:
 		toggle_label_visibility(true)
-		

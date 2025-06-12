@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ocvsdi04icv"]
+
+[ext_resource type="Texture2D" uid="uid://c3rdxv14pm4gy" path="res://asset/indicator1.png" id="1_uj15k"]
+[ext_resource type="Script" uid="uid://b5o0ra3ii7wek" path="res://scripts/red_point.gd" id="2_mgknb"]
+
+[node name="RedPoint" type="TextureButton"]
+custom_minimum_size = Vector2(40, 40)
+texture_normal = ExtResource("1_uj15k")
+stretch_mode = 0
+script = ExtResource("2_mgknb")

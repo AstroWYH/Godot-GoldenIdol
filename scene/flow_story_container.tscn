@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://buiaogge8ue8j"]
 
-[ext_resource type="Script" uid="uid://dns83agchwwlk" path="res://scene/flow_story_container.gd" id="1_ot2kk"]
+[ext_resource type="Script" uid="uid://dns83agchwwlk" path="res://scripts/flow_story_container.gd" id="1_ot2kk"]
 [ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="1_yh6ql"]
 
 [node name="FlowStoryContainer" type="HFlowContainer"]

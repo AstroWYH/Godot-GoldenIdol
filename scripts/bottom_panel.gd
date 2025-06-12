@@ -13,6 +13,6 @@ func _ready():
 func _on_back_button_pressed():
 	print("button按钮被点击")
 	emit_signal("sig_toggle_popui")
-	
+
 func _on_portrait_button_pressed():
 	emit_signal("sig_toggle_portrait_ui")

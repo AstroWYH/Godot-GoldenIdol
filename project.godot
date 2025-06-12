@@ -14,15 +14,14 @@ config/name="goldendev"
 run/main_scene="uid://r5elhr5ylxtu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/fullsize=false
-boot_splash/image="uid://cnr0to1rjnpmv"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=500
 
 [autoload]
 
 GFloatMessage="*res://scripts/global/g_float_message.gd"
 GGameUi="*res://scripts/global/g_game_ui.gd"
 GEnum="*res://scripts/global/g_game_enum.gd"
+GClueData="*res://scripts/global/g_clue_data.gd"
 
 [display]
 

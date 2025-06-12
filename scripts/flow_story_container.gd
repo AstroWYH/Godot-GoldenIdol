@@ -37,7 +37,7 @@ func _ready():
 func parse_text_to_nodes(container: FlowContainer, text: String, locale: String) -> void:
 	for child in container.get_children():
 		child.queue_free()
-	
+
 	var pattern := r"\[([A-Z_0-9]+)\]"  # 允许占位符包含数字，如 PERSON_1
 	var regex := RegEx.new()
 	regex.compile(pattern)

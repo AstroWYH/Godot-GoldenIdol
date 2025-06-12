@@ -3,7 +3,7 @@ extends Control
 @onready var bottom_panel = $BottomPanel
 @onready var pop_ui = $PopUI
 @onready var portrait_ui = $PortraiUI
-@onready var world_bottom_panel = %WordBottomPanel.get_node('Grid')
+@onready var world_bottom_panel = %WordBottomPanel.get_node('Grid') # 用%更好
 @onready var explore_panel = %ExplorePanel
 @onready var switch_btn = %SwitchBtn
 
@@ -11,19 +11,12 @@ var explore_animation_duration: float = 0.3  # 动画时长（秒）
 var explore_original_size: Vector2  # 存储原始大小
 
 func _ready():
-	#bottom_panel.sig_toggle_popui.connect(_on_toggle_pop_ui)
-	#bottom_panel.sig_toggle_portrait_ui.connect(_on_toggle_portarit_ui)
+	GGameUi.main_ui = self
 	GGameUi.world_bottom_container = world_bottom_panel
 	switch_btn.pressed.connect(_on_switch)
 	# 记录 explore_panel 的原始size
 	explore_original_size = explore_panel.size # 939
 
-#func _on_toggle_pop_ui():
-	#pop_ui.visible = !pop_ui.visible
-	
-#func _on_toggle_portarit_ui():
-	#portrait_ui.visible = !portrait_ui.visible
-	
 func _on_switch():
 	var tween = create_tween()
 	if explore_panel.visible:
