@@ -1,16 +1,8 @@
 #@tool
-extends Control
+extends ClueBaseUI
 class_name ClueImageAndTextUI
 
 @onready var content_layer := %ContentLayer
-
-var chapter: int = 1
-var id: int = 3
-var grid_container = null
-
-func set_info(in_chapter: int, in_id: int):
-	chapter = in_chapter
-	id = in_id
 
 func _ready():
 	var clue_data = GClueData.get_clue_data(chapter, id, GClueData.lang)
@@ -39,10 +31,18 @@ func _ready():
 		label.meta_clicked.connect(_on_meta_clicked)
 		content_layer.add_child(label)
 
+	# 添加红点
+	var red_points = clue_data.get("red_points")
+	if red_points:
+		for point_data in red_points:
+			var red_point = GPreload.red_point_res.instantiate()
+			red_point.set_info(point_data.get('chapter'), point_data.get('id'))
+			red_point.position = point_data.get('position')
+			content_layer.add_child(red_point)
+
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	self.set_anchors_preset(PRESET_CENTER) # 默认居中显示 只设size
 	self.size = clue_data.get("size")
-	#self.position = clue_data.get("position")
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -60,7 +60,7 @@ func _on_meta_clicked(meta):
 		var word_id = meta.replace(word_prefix, "")
 		var label_text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("entries").get(word_id)
 
-		grid_container = GGameUi.world_bottom_container
+		var grid_container = GGameUi.world_bottom_container
 		var word_entry = GPreload.word_entry_res.instantiate()
 		GGameUi.main_ui.add_child(word_entry)
 		word_entry.set_label(label_text)

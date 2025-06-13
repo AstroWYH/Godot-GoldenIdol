@@ -10,7 +10,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_55k38")
 
-[node name="ClueTextUI" type="NinePatchRect" parent="."]
+[node name="CluePanel" type="NinePatchRect" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 200)
 offset_right = 400.0
@@ -22,7 +22,7 @@ patch_margin_right = 30
 patch_margin_bottom = 30
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="ClueTextUI"]
+[node name="MarginContainer" type="MarginContainer" parent="CluePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +34,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="RichText" type="RichTextLabel" parent="ClueTextUI/MarginContainer"]
+[node name="RichText" type="RichTextLabel" parent="CluePanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30

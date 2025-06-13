@@ -1,21 +1,15 @@
 @tool
-extends Control
+extends ClueBaseUI
 class_name ClueTextUI
 
+@onready var clue_panel := %CluePanel
 @onready var text = %RichText
-var grid_container = null
-var chapter : int = -1
-var id : int = -1
-
-# 更早于_ready()执行
-func set_info(in_chapter: int, in_id: int):
-	chapter = in_chapter
-	id = in_id
 
 func _ready():
 	text.meta_clicked.connect(_on_meta_clicked)
 	text.text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("text")
 	mouse_filter = Control.MOUSE_FILTER_STOP  # 必须拦截事件
+	global_position = get_global_mouse_position()
 
 func _input(event: InputEvent) -> void:
 	#print("_unhandled_input event: ", event)
@@ -27,7 +21,7 @@ func _input(event: InputEvent) -> void:
 			return
 		# 鼠标左键点击 UI 外部时关闭
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if not %ClueTextUI.get_global_rect().has_point(mouse_pos):
+			if not clue_panel.get_global_rect().has_point(mouse_pos):
 				queue_free()
 
 # 获取点击的词条
@@ -38,7 +32,7 @@ func _on_meta_clicked(meta):
 		var word_id = meta.replace(word_prefix, "")
 		var label_text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("entries").get(word_id)
 		# 实例化word_entry
-		grid_container = GGameUi.world_bottom_container
+		var grid_container = GGameUi.world_bottom_container
 		var word_entry = GPreload.word_entry_res.instantiate()
 		GGameUi.main_ui.add_child(word_entry) # 先暂时添加到当前场景树 否则看不到
 		#word_entry.size_flags_horizontal = Control.SIZE_EXPAND_FILL # 关键 否则最后在容器里不均匀

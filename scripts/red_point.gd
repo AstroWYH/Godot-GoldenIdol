@@ -16,11 +16,10 @@ func _on_pressed():
 	match panel_type:
 		GEnum.EClueUIType.Text:
 			ui = GPreload.clue_text_res.instantiate()
-		GEnum.EClueUIType.Img:
-			ui = GPreload.clue_image_res.instantiate()
+		#GEnum.EClueUIType.Img:
+			#ui = GPreload.clue_image_res.instantiate()
 		GEnum.EClueUIType.ImgText:
 			ui = GPreload.clue_image_and_text_res.instantiate()
 		_: return
-	ui.global_position = get_global_mouse_position()
 	ui.set_info(chapter, id)
 	GGameUi.main_ui.add_child(ui)

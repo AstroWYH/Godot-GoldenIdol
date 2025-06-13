@@ -123,7 +123,7 @@ var clues := {
 					},
 				}
 			},
-			"redpoints": [
+			"red_points": [
 				{
 					"chapter": 1,
 					"id": 1,
@@ -174,5 +174,6 @@ func get_clue_data(chapter: int, id: int, lang: String = "zh") -> Dictionary:
 				"size": base.get("size"),
 				"position": base.get("position"),
 				"data": clue_info[lang],
+				"red_points": base.get("red_points"),
 			}
 	return {}
