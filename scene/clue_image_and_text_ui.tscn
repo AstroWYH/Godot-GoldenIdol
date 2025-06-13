@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1owxjgevbnou"]
+
+[ext_resource type="Script" uid="uid://b0j543ipj8jd1" path="res://scripts/clue_image_and_text_ui.gd" id="1_8x3sl"]
+[ext_resource type="Texture2D" uid="uid://rf7603w6lh4k" path="res://asset/frame_spech_green.png" id="2_1axh6"]
+[ext_resource type="Texture2D" uid="uid://cnr0to1rjnpmv" path="res://asset/startup.png" id="2_xhqkk"]
+[ext_resource type="Texture2D" uid="uid://pcpuhm2e2bqs" path="res://asset/phrase_red.png" id="4_1axh6"]
+
+[node name="ClueImageAndTextUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8x3sl")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1axh6")
+patch_margin_left = 50
+patch_margin_top = 50
+patch_margin_right = 50
+patch_margin_bottom = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+color = Color(0.0156768, 0.203149, 0.190374, 1)
+
+[node name="ContentLayer" type="Control" parent="NinePatchRect/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MarginContainer/ContentLayer"]
+visible = false
+layout_mode = 0
+offset_left = 200.0
+offset_top = 120.0
+offset_right = 260.0
+offset_bottom = 180.0
+texture = ExtResource("2_xhqkk")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="NinePatchRect/MarginContainer/ContentLayer"]
+visible = false
+layout_mode = 0
+offset_left = 60.0
+offset_top = 300.0
+offset_right = 100.0
+offset_bottom = 340.0
+texture = ExtResource("4_1axh6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/ContentLayer"]
+visible = false
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 100.0
+bbcode_enabled = true
+text = "你是什么的"

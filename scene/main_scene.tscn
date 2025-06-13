@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://r5elhr5ylxtu"]
+[gd_scene load_steps=11 format=3 uid="uid://r5elhr5ylxtu"]
 
 [ext_resource type="Script" uid="uid://ewywjpx5teem" path="res://scripts/main_scene.gd" id="1_jsie2"]
 [ext_resource type="Texture2D" uid="uid://canujjt0jwhpo" path="res://asset/Golden.png" id="1_wgwml"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dyw5lw66sxry2" path="res://scene/portrai_ui.tscn" id="7_qvu5t"]
 [ext_resource type="PackedScene" uid="uid://7ocvsdi04icv" path="res://scene/red_point.tscn" id="8_hrphr"]
 [ext_resource type="PackedScene" uid="uid://dtkxgvumgd4fw" path="res://scene/word_bottom_panel.tscn" id="8_pi0uh"]
+[ext_resource type="PackedScene" uid="uid://c1owxjgevbnou" path="res://scene/clue_image_and_text_ui.tscn" id="9_86xya"]
 [ext_resource type="PackedScene" uid="uid://kuu5yuqbb3jy" path="res://scene/explore_panel.tscn" id="9_hrphr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fb1ex"]
@@ -126,4 +127,7 @@ offset_top = 832.0
 offset_right = 1278.0
 offset_bottom = 872.0
 chapter = 1
-id = 2
+id = 1
+
+[node name="ClueImageAndTextUI" parent="." instance=ExtResource("9_86xya")]
+layout_mode = 1

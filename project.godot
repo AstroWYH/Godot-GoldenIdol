@@ -22,6 +22,7 @@ GFloatMessage="*res://scripts/global/g_float_message.gd"
 GGameUi="*res://scripts/global/g_game_ui.gd"
 GEnum="*res://scripts/global/g_game_enum.gd"
 GClueData="*res://scripts/global/g_clue_data.gd"
+GPreload="*res://scripts/global/g_preload_path.gd"
 
 [display]
 

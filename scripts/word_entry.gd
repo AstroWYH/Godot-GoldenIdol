@@ -11,11 +11,11 @@ var word_key := ""  # 用于标识词条类型，如 PERSON、ITEM、PLACE
 var word_type: GEnum.EWordPlace = GEnum.EWordPlace.Bottom
 
 func _ready() -> void:
-	pressed.connect(_on_button_pressed)
+	pressed.connect(on_button_pressed)
 	if b_use_extern_label:
 		label.text = extern_label
 
-func _on_button_pressed():
+func on_button_pressed():
 	print('word_entry clicked')
 
 func set_label(in_label: String) -> void:
@@ -52,3 +52,14 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	if data.text == label.text:
 		toggle_label_visibility(true)
+
+func fly(target_container: Container, target_pos: Vector2):
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT) # 落地时变慢
+	tween.tween_property(self, "global_position", target_pos, 1)
+	tween.tween_callback(_on_fly_finished.bind(target_container))
+
+func _on_fly_finished(target_container: Container):
+	# 动画完成后，将 WordEntry 重定向到 target_container
+	self.reparent(target_container)

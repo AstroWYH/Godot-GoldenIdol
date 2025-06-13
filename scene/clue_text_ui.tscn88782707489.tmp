@@ -3,15 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rf7603w6lh4k" path="res://asset/frame_spech_green.png" id="1_18clv"]
 [ext_resource type="Script" uid="uid://clekrjlu4c3og" path="res://scripts/clue_text_ui.gd" id="2_55k38"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_55k38")
-
-[node name="ClueTextUI" type="NinePatchRect" parent="."]
-unique_name_in_owner = true
+[node name="ClueTextUI" type="NinePatchRect"]
 custom_minimum_size = Vector2(400, 200)
 offset_right = 400.0
 offset_bottom = 60.0
@@ -20,9 +12,10 @@ patch_margin_left = 30
 patch_margin_top = 30
 patch_margin_right = 30
 patch_margin_bottom = 30
+script = ExtResource("2_55k38")
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="ClueTextUI"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +27,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="RichText" type="RichTextLabel" parent="ClueTextUI/MarginContainer"]
+[node name="RichText" type="RichTextLabel" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30

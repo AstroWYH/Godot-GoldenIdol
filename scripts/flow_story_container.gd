@@ -66,7 +66,7 @@ func create_label(text: String) -> Label:
 	return lbl
 
 func create_wordentry(key: String, locale: String) -> Control:
-	var entry := preload("res://scene/word_entry.tscn").instantiate()
+	var entry := GPreload.word_entry_res.instantiate()
 	var placeholder := get_placeholder_for_key(key, locale)
 	entry.set_label(placeholder)
 	entry.toggle_label_visibility(false)
