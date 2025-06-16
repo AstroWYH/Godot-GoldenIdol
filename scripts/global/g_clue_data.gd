@@ -6,7 +6,7 @@ var clues := {
 	1: {
 		# 1-1: 纯文本
 		1: {
-			"type": "text",
+			"type": 1,
 			"clue_info": {
 				"zh": {
 					"text": "唉，[u][url=word://PERSON_1]摩根[/url][/u]先生，[u][url=word://PERSON_2]艾琳[/url][/u]小姐说她看到他手上拿着[u][url=word://ITEM_1]酒杯[/url][/u]，有人在[u][url=word://PLACE_1]图书馆[/url][/u]发现了[u][url=word://ITEM_2]毒药瓶[/url][/u]，最后他还被看见出现在[u][url=word://PLACE_2]厨房[/url][/u]。",
@@ -30,17 +30,26 @@ var clues := {
 						"PLACE_2": "kitchen"
 					}
 				}
-			}
+			},
+			"red_points": [
+				{
+					"type": 2,
+					"chapter": 1,
+					"id": 4,
+					"position": Vector2(20, 20)
+				},
+			],
 		},
 
 		# 1-2: 纯图片
 		2: {
-			"type": "image",
+			"type": 2,
+			"size": Vector2(200, 200),
 			"clue_info": {
 				"zh": {
 					"images": [
 						{
-							"path": "res://assets/images/photo1.png",
+							"path": "res://asset/btn_0000_close_idle.png",
 							"size": Vector2(150, 150),
 							"position": Vector2(100, 80),
 						},
@@ -64,13 +73,27 @@ var clues := {
 							"position": Vector2(300, 200),
 						}
 					]
+				},
+			},
+			"red_points": [
+				{
+					"type": 1,
+					"chapter": 1,
+					"id": 1,
+					"position": Vector2(20, 20)
+				},
+				{
+					"type": 2,
+					"chapter": 1,
+					"id": 4,
+					"position": Vector2(50, 50)
 				}
-			}
+			],
 		},
 
 		# 1-3: 图文混合
 		3: {
-			"type": "text_image",
+			"type": 3,
 			"size": Vector2(600, 600),
 			"position": Vector2(0, 0),
 			"clue_info": {
@@ -78,8 +101,8 @@ var clues := {
 					"images": [
 						{
 							"path": "res://asset/startup.png",
-							"size": Vector2(400, 400),
-							"position": Vector2(0, 0),
+							"size": Vector2(50, 50),
+							"position": Vector2(200, 120),
 						},
 						{
 							"path": "res://asset/phrase_red.png",
@@ -125,11 +148,13 @@ var clues := {
 			},
 			"red_points": [
 				{
+					"type": 1,
 					"chapter": 1,
 					"id": 1,
 					"position": Vector2(20, 20)
 				},
 				{
+					"type": 2,
 					"chapter": 1,
 					"id": 2,
 					"position": Vector2(50, 50)
@@ -139,12 +164,13 @@ var clues := {
 
 		# 1-4: 纯图片
 		4: {
-			"type": "image",
+			"type": 2,
+			"size": Vector2(400, 400),
 			"clue_info": {
 				"zh": {
 					"images": [
 						{
-							"path": "res://assets/images/knife_blood.png",
+							"path": "res://asset/Golden.png",
 							"position": Vector2(180, 160),
 							"size": Vector2(120, 120)
 						}

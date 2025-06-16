@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rf7603w6lh4k" path="res://asset/frame_spech_green.png" id="1_18clv"]
 [ext_resource type="Script" uid="uid://clekrjlu4c3og" path="res://scripts/clue_text_ui.gd" id="2_55k38"]
 
-[node name="Control" type="Control"]
+[node name="ClueTextUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -40,3 +40,7 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "godot里，做一个UI用于显示文字，文字有多少个，UI就有多大啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"
+
+[node name="ContentLayer" type="Control" parent="CluePanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2

@@ -2,27 +2,19 @@
 extends ClueBaseUI
 class_name ClueTextUI
 
-@onready var clue_panel := %CluePanel
 @onready var text = %RichText
 
 func _ready():
+	content_layer = %ContentLayer
+	clue_panel = %CluePanel
+	type = GEnum.EClueUIType.Text
+	super._ready()
+	super.set_clue_panel(clue_panel)
 	text.meta_clicked.connect(_on_meta_clicked)
-	text.text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("text")
+	text.text = clue_data.get('data').get("text")
 	mouse_filter = Control.MOUSE_FILTER_STOP  # 必须拦截事件
 	global_position = get_global_mouse_position()
-
-func _input(event: InputEvent) -> void:
-	#print("_unhandled_input event: ", event)
-	if event is InputEventMouseButton and event.pressed:
-		var mouse_pos = get_global_mouse_position()
-		# 鼠标右键点击：无论在哪，直接关闭
-		if event.button_index == MOUSE_BUTTON_RIGHT:
-			queue_free()
-			return
-		# 鼠标左键点击 UI 外部时关闭
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if not clue_panel.get_global_rect().has_point(mouse_pos):
-				queue_free()
+	super.set_red_points()
 
 # 获取点击的词条
 func _on_meta_clicked(meta):
@@ -30,7 +22,7 @@ func _on_meta_clicked(meta):
 	if typeof(meta) == TYPE_STRING and meta.begins_with(word_prefix):
 		var word = meta.replace(word_prefix, "")
 		var word_id = meta.replace(word_prefix, "")
-		var label_text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("entries").get(word_id)
+		var label_text = clue_data.get('data').get("entries").get(word_id)
 		# 实例化word_entry
 		var grid_container = GGameUi.world_bottom_container
 		var word_entry = GPreload.word_entry_res.instantiate()

@@ -2,11 +2,12 @@
 extends ClueBaseUI
 class_name ClueImageAndTextUI
 
-@onready var content_layer := %ContentLayer
-
 func _ready():
-	var clue_data = GClueData.get_clue_data(chapter, id, GClueData.lang)
-	if clue_data.get("type") != "text_image": return
+	content_layer = %ContentLayer
+	clue_panel = %CluePanel
+	type = GEnum.EClueUIType.ImgText
+	super._ready()
+	super.set_clue_panel(clue_panel)
 
 	var data = clue_data.get("data")
 	# 添加图片块
@@ -31,34 +32,18 @@ func _ready():
 		label.meta_clicked.connect(_on_meta_clicked)
 		content_layer.add_child(label)
 
-	# 添加红点
-	var red_points = clue_data.get("red_points")
-	if red_points:
-		for point_data in red_points:
-			var red_point = GPreload.red_point_res.instantiate()
-			red_point.set_info(point_data.get('chapter'), point_data.get('id'))
-			red_point.position = point_data.get('position')
-			content_layer.add_child(red_point)
+	## 添加红点
+	super.set_red_points()
 
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	self.set_anchors_preset(PRESET_CENTER) # 默认居中显示 只设size
 	self.size = clue_data.get("size")
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		var mouse_pos = get_global_mouse_position()
-		if event.button_index == MOUSE_BUTTON_RIGHT:
-			queue_free()
-			return
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if not self.get_global_rect().has_point(mouse_pos):
-				queue_free()
-
 func _on_meta_clicked(meta):
 	var word_prefix = "word://"
 	if typeof(meta) == TYPE_STRING and meta.begins_with(word_prefix):
 		var word_id = meta.replace(word_prefix, "")
-		var label_text = GClueData.get_clue_data(chapter, id, GClueData.lang).get('data').get("entries").get(word_id)
+		var label_text = clue_data.get('data').get("entries").get(word_id)
 
 		var grid_container = GGameUi.world_bottom_container
 		var word_entry = GPreload.word_entry_res.instantiate()

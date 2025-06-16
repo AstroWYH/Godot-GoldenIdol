@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://r5elhr5ylxtu"]
+[gd_scene load_steps=10 format=3 uid="uid://r5elhr5ylxtu"]
 
 [ext_resource type="Script" uid="uid://ewywjpx5teem" path="res://scripts/main_scene.gd" id="1_jsie2"]
 [ext_resource type="Texture2D" uid="uid://canujjt0jwhpo" path="res://asset/Golden.png" id="1_wgwml"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dyw5lw66sxry2" path="res://scene/portrai_ui.tscn" id="7_qvu5t"]
 [ext_resource type="PackedScene" uid="uid://7ocvsdi04icv" path="res://scene/red_point.tscn" id="8_hrphr"]
 [ext_resource type="PackedScene" uid="uid://dtkxgvumgd4fw" path="res://scene/word_bottom_panel.tscn" id="8_pi0uh"]
-[ext_resource type="PackedScene" uid="uid://c1owxjgevbnou" path="res://scene/clue_image_and_text_ui.tscn" id="9_86xya"]
 [ext_resource type="PackedScene" uid="uid://kuu5yuqbb3jy" path="res://scene/explore_panel.tscn" id="9_hrphr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fb1ex"]
@@ -120,7 +119,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 text = "探索⬅➡思考"
 
-[node name="RedPoint" parent="." instance=ExtResource("8_hrphr")]
+[node name="RedPoint_Text" parent="." instance=ExtResource("8_hrphr")]
 layout_mode = 0
 offset_left = 1238.0
 offset_top = 832.0
@@ -129,5 +128,22 @@ offset_bottom = 872.0
 chapter = 1
 id = 1
 
-[node name="ClueImageAndTextUI" parent="." instance=ExtResource("9_86xya")]
-layout_mode = 1
+[node name="RedPoint_Text_Img" parent="." instance=ExtResource("8_hrphr")]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 786.0
+offset_right = 824.0
+offset_bottom = 826.0
+panel_type = 3
+chapter = 1
+id = 3
+
+[node name="RedPoint_Img" parent="." instance=ExtResource("8_hrphr")]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 457.0
+offset_right = 372.0
+offset_bottom = 497.0
+panel_type = 2
+chapter = 1
+id = 2

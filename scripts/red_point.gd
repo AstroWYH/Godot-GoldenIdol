@@ -4,7 +4,8 @@ extends TextureButton
 @export var chapter : int = -1
 @export var id : int = -1
 
-func set_info(in_chapter: int, in_id: int):
+func set_red_point_info(in_pane_type: GEnum.EClueUIType, in_chapter: int, in_id: int):
+	panel_type = in_pane_type
 	chapter = in_chapter
 	id = in_id
 
@@ -16,8 +17,8 @@ func _on_pressed():
 	match panel_type:
 		GEnum.EClueUIType.Text:
 			ui = GPreload.clue_text_res.instantiate()
-		#GEnum.EClueUIType.Img:
-			#ui = GPreload.clue_image_res.instantiate()
+		GEnum.EClueUIType.Img:
+			ui = GPreload.clue_image_res.instantiate()
 		GEnum.EClueUIType.ImgText:
 			ui = GPreload.clue_image_and_text_res.instantiate()
 		_: return
