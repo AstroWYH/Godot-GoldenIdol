@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bm55g0ph16ryk"]
+
+[ext_resource type="Shader" uid="uid://5xo05w4vvmoe" path="res://shader/wave_line.gdshader" id="1_nk3em"]
+
+[resource]
+shader = ExtResource("1_nk3em")
