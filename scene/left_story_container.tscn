@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://buiaogge8ue8j"]
 
-[ext_resource type="Script" uid="uid://dns83agchwwlk" path="res://scripts/flow_story_container.gd" id="1_ot2kk"]
-[ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="1_yh6ql"]
+[ext_resource type="Script" uid="uid://dns83agchwwlk" path="res://scripts/left_story_container.gd" id="1_1ocga"]
+[ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="2_2hi5s"]
 
-[node name="FlowStoryContainer" type="HFlowContainer"]
+[node name="LeftStoryContainer" type="HFlowContainer"]
 custom_minimum_size = Vector2(580, 811)
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,8 +12,9 @@ offset_right = -1340.0
 offset_bottom = -269.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.01538, 1)
 alignment = 1
-script = ExtResource("1_ot2kk")
+script = ExtResource("1_1ocga")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -25,13 +26,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "一行数据一行"
 
-[node name="WordEntry2" parent="." instance=ExtResource("1_yh6ql")]
+[node name="WordEntry2" parent="." instance=ExtResource("2_2hi5s")]
 layout_mode = 2
 
-[node name="WordEntry3" parent="." instance=ExtResource("1_yh6ql")]
+[node name="WordEntry3" parent="." instance=ExtResource("2_2hi5s")]
 layout_mode = 2
 
-[node name="WordEntry4" parent="." instance=ExtResource("1_yh6ql")]
+[node name="WordEntry4" parent="." instance=ExtResource("2_2hi5s")]
 layout_mode = 2
 
 [node name="Label3" type="Label" parent="."]

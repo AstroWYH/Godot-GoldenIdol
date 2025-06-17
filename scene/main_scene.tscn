@@ -68,6 +68,35 @@ offset_top = 605.0
 offset_right = 1498.0
 offset_bottom = 605.0
 
+[node name="RedPoint_Text" parent="." instance=ExtResource("8_hrphr")]
+layout_mode = 0
+offset_left = 1238.0
+offset_top = 832.0
+offset_right = 1278.0
+offset_bottom = 872.0
+chapter = 1
+id = 1
+
+[node name="RedPoint_Text_Img" parent="." instance=ExtResource("8_hrphr")]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 786.0
+offset_right = 824.0
+offset_bottom = 826.0
+panel_type = 3
+chapter = 1
+id = 3
+
+[node name="RedPoint_Img" parent="." instance=ExtResource("8_hrphr")]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 457.0
+offset_right = 372.0
+offset_bottom = 497.0
+panel_type = 2
+chapter = 1
+id = 2
+
 [node name="ExploreUI" type="VBoxContainer" parent="."]
 layout_mode = 2
 offset_right = 1920.0
@@ -118,32 +147,3 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 text = "探索⬅➡思考"
-
-[node name="RedPoint_Text" parent="." instance=ExtResource("8_hrphr")]
-layout_mode = 0
-offset_left = 1238.0
-offset_top = 832.0
-offset_right = 1278.0
-offset_bottom = 872.0
-chapter = 1
-id = 1
-
-[node name="RedPoint_Text_Img" parent="." instance=ExtResource("8_hrphr")]
-layout_mode = 0
-offset_left = 784.0
-offset_top = 786.0
-offset_right = 824.0
-offset_bottom = 826.0
-panel_type = 3
-chapter = 1
-id = 3
-
-[node name="RedPoint_Img" parent="." instance=ExtResource("8_hrphr")]
-layout_mode = 0
-offset_left = 332.0
-offset_top = 457.0
-offset_right = 372.0
-offset_bottom = 497.0
-panel_type = 2
-chapter = 1
-id = 2

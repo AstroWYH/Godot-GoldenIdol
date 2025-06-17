@@ -1,7 +1,6 @@
 extends Node
 
 # 语言总开关
-var lang := 'zh'
 var clues := {
 	1: {
 		# 1-1: 纯文本
@@ -191,9 +190,10 @@ var clues := {
 }
 
 func get_clue_data(chapter: int, id: int, lang: String = "zh") -> Dictionary:
+	lang = GSetting.lang
 	if clues.has(chapter) and clues[chapter].has(id):
 		var base = clues[chapter][id]
-		var clue_info = base.get("clue_info", {})
+		var clue_info = base.get("clue_info")
 		if clue_info.has(lang):
 			return {
 				"type": base.get("type"),

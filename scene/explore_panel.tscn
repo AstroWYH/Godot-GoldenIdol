@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://kuu5yuqbb3jy"]
 
 [ext_resource type="Script" uid="uid://bijacm62n8nox" path="res://scripts/explore_panel.gd" id="1_l1y2r"]
-[ext_resource type="PackedScene" uid="uid://buiaogge8ue8j" path="res://scene/flow_story_container.tscn" id="2_qqthb"]
+[ext_resource type="PackedScene" uid="uid://buiaogge8ue8j" path="res://scene/left_story_container.tscn" id="2_qqthb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1y2r"]
 
@@ -49,18 +49,26 @@ theme_override_constants/margin_bottom = 30
 [node name="HFlowContainer" type="HFlowContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="FlowStoryContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer" instance=ExtResource("2_qqthb")]
+[node name="LeftStoryContainer" parent="HBoxContainer/StoryPanel/VBoxContainer/PanelContainer/MarginContainer/HFlowContainer" instance=ExtResource("2_qqthb")]
 layout_mode = 2
 
 [node name="CharacterPanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/CharacterPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/CharacterPanel"]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer/CharacterPanel/ScrollContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/CharacterPanel/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "尚有人物未被发现"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/CharacterPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="CluePanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2

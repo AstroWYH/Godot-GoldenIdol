@@ -19,7 +19,7 @@ func set_clue_panel(in_clue_panel : Control):
 
 func _ready():
 	opened_ui_stack.append(self)
-	clue_data = GClueData.get_clue_data(chapter, id, GClueData.lang)
+	clue_data = GDataClue.get_clue_data(chapter, id)
 	content_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE # 这是必须的 否则content layer会阻挡一些点击事件
 
 func set_red_points():
