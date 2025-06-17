@@ -35,6 +35,7 @@ func set_red_points():
 func _exit_tree():
 	opened_ui_stack.erase(self)
 
+# 富文本点击事件
 func _input(event: InputEvent): # 需要保证子类实例同时接收input时，opened_ui_stack还没来得及erase，默认是这样的
 	if opened_ui_stack.back() != self:
 		# 不是最上层UI，不处理关闭

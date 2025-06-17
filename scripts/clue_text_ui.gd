@@ -3,6 +3,7 @@ extends ClueBaseUI
 class_name ClueTextUI
 
 @onready var text = %RichText
+var clicked_words := {}
 
 func _ready():
 	content_layer = %ContentLayer
@@ -20,8 +21,12 @@ func _ready():
 func _on_meta_clicked(meta):
 	var word_prefix = "word://"
 	if typeof(meta) == TYPE_STRING and meta.begins_with(word_prefix):
-		var word = meta.replace(word_prefix, "")
-		var word_id = meta.replace(word_prefix, "")
+		var word_id = meta.replace(word_prefix, "") # PERSON_1
+
+		# 防止重复点击
+		if clicked_words.has(word_id): return
+		clicked_words[word_id] = true
+
 		var label_text = clue_data.get('data').get("entries").get(word_id)
 		# 实例化word_entry
 		var grid_container = GGameUI.word_bottom_panel
@@ -30,6 +35,7 @@ func _on_meta_clicked(meta):
 		#word_entry.size_flags_horizontal = Control.SIZE_EXPAND_FILL # 关键 否则最后在容器里不均匀
 		word_entry.set_word_entry_info(label_text, GEnum.EWordPlace.Bottom)
 		word_entry.global_position = get_global_mouse_position()
+
 		# 临时新增一个透明 word_entry_copy 用于确定目标位置
 		var word_entry_copy = word_entry.duplicate()
 		word_entry_copy.modulate = Color(1, 1, 1, 0)
@@ -39,5 +45,6 @@ func _on_meta_clicked(meta):
 		await get_tree().process_frame  # 关键 等到下一帧开始之前（process_frame） 子控件的位置才更新完成
 		var target_position = last_child.global_position
 		word_entry_copy.queue_free()
+
 		# fly to target
 		word_entry.fly(grid_container, target_position)

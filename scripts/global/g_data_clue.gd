@@ -1,6 +1,5 @@
 extends Node
 
-# 语言总开关
 var clues := {
 	1: {
 		# 1-1: 纯文本
