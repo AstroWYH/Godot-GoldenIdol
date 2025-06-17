@@ -7,7 +7,7 @@ var clues := {
 			"type": 1,
 			"clue_info": {
 				"zh": {
-					"text": "唉，[u][url=word://PERSON_1]摩根[/url][/u]先生，[u][url=word://PERSON_2]艾琳[/url][/u]小姐说她看到他手上拿着[u][url=word://ITEM_1]酒杯[/url][/u]，有人在[u][url=word://PLACE_1]图书馆[/url][/u]发现了[u][url=word://ITEM_2]毒药瓶[/url][/u]，最后他还被看见出现在[u][url=word://PLACE_2]厨房[/url][/u]。",
+					"text": "唉，[wave][url=word://PERSON_1]摩根[/url][/wave]先生，[wave][url=word://PERSON_2]艾琳[/url][/wave]小姐说她看到他手上拿着[wave][url=word://ITEM_1]酒杯[/url][/wave]，有人在[wave][url=word://PLACE_1]图书馆[/url][/wave]发现了[wave][url=word://ITEM_2]毒药瓶[/url][/wave]，最后他还被看见出现在[wave][url=word://PLACE_2]厨房[/url][/wave]。",
 					"entries": {
 						"PERSON_1": "摩根",
 						"PERSON_2": "艾琳",
@@ -18,7 +18,7 @@ var clues := {
 					}
 				},
 				"en": {
-					"text": "Ah, [u][url=word://PERSON_1]Morgan[/url][/u], I didn't expect it would come to this. Miss [u][url=word://PERSON_2]Irene[/url][/u] said she saw him holding a [u][url=word://ITEM_1]wine glass[/url][/u], and someone found a [u][url=word://ITEM_2]poison bottle[/url][/u] in the [u][url=word://PLACE_1]library[/url][/u]. He was last seen in the [u][url=word://PLACE_2]kitchen[/url][/u].",
+					"text": "Ah, [wave][url=word://PERSON_1]Morgan[/url][/wave], I didn't expect it would come to this. Miss [wave][url=word://PERSON_2]Irene[/url][/wave] said she saw him holding a [wave][url=word://ITEM_1]wine glass[/url][/wave], and someone found a [wave][url=word://ITEM_2]poison bottle[/url][/wave] in the [wave][url=word://PLACE_1]library[/url][/wave]. He was last seen in the [wave][url=word://PLACE_2]kitchen[/url][/wave].",
 					"entries": {
 						"PERSON_1": "Morgan",
 						"PERSON_2": "Irene",
@@ -110,7 +110,7 @@ var clues := {
 					],
 					"text_blocks": [
 						{
-							"text": "这是关键的一封信，[u][url=word://ITEM_3]密信[/url][/u]的内容可能揭示了真相。",
+							"text": "这是关键的一封信，[wave][url=word://ITEM_3]密信[/url][/wave]的内容可能揭示了真相。",
 							"size": Vector2(200, 100),
 							"position": Vector2(80, 40)
 						}
@@ -134,7 +134,7 @@ var clues := {
 					],
 					"text_blocks": [
 						{
-							"text": "This is a crucial letter. The content of the [u][url=word://ITEM_3]secret note[/url][/u] may reveal the truth.",
+							"text": "This is a crucial letter. The content of the [wave][url=word://ITEM_3]secret note[/url][/wave] may reveal the truth.",
 							"size": Vector2(200, 100),
 							"position": Vector2(80, 40)
 						}
