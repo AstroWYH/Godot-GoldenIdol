@@ -11,11 +11,12 @@ var explore_animation_duration: float = 0.3  # 动画时长（秒）
 var explore_original_size: Vector2  # 存储原始大小
 
 func _ready():
-	GGameUi.main_ui = self
-	GGameUi.world_bottom_container = world_bottom_panel
+	GGameUI.main_ui = self
+	GGameUI.word_bottom_panel = world_bottom_panel
+	GGameUI.explore_panel = explore_panel
 	switch_btn.pressed.connect(_on_switch)
 	# 记录 explore_panel 的原始size
-	explore_original_size = explore_panel.size # 939
+	explore_original_size = explore_panel.size # editor数据为939
 
 func _on_switch():
 	var tween = create_tween()

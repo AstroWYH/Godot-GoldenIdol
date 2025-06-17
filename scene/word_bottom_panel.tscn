@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtkxgvumgd4fw"]
+[gd_scene load_steps=3 format=3 uid="uid://dtkxgvumgd4fw"]
 
 [ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="1_cks08"]
+[ext_resource type="Script" uid="uid://beii5k8t8ow8n" path="res://scripts/word_bottom_panel.gd" id="1_o7pbn"]
 
 [node name="WordBottomPanel" type="PanelContainer"]
 anchors_preset = 7
@@ -27,11 +28,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 12
+script = ExtResource("1_o7pbn")
 
 [node name="WordEntry" parent="Grid" instance=ExtResource("1_cks08")]
+visible = false
 layout_mode = 2
 extern_label = "红酒"
 
 [node name="WordEntry2" parent="Grid" instance=ExtResource("1_cks08")]
+visible = false
 layout_mode = 2
 extern_label = "摩根"

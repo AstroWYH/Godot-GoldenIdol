@@ -23,4 +23,4 @@ func _on_pressed():
 			ui = GPreload.clue_image_and_text_res.instantiate()
 		_: return
 	ui.set_info(chapter, id)
-	GGameUi.main_ui.add_child(ui)
+	GGameUI.main_ui.add_child(ui)

@@ -45,10 +45,10 @@ func _on_meta_clicked(meta):
 		var word_id = meta.replace(word_prefix, "")
 		var label_text = clue_data.get('data').get("entries").get(word_id)
 
-		var grid_container = GGameUi.world_bottom_container
+		var grid_container = GGameUI.word_bottom_panel
 		var word_entry = GPreload.word_entry_res.instantiate()
-		GGameUi.main_ui.add_child(word_entry)
-		word_entry.set_label(label_text)
+		GGameUI.main_ui.add_child(word_entry)
+		word_entry.set_word_entry_info(label_text, GEnum.EWordPlace.Bottom)
 		word_entry.global_position = get_global_mouse_position()
 
 		# 创建透明控件作为飞行目标

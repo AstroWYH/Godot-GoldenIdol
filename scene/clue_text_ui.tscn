@@ -13,6 +13,7 @@ script = ExtResource("2_55k38")
 [node name="CluePanel" type="NinePatchRect" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 200)
+layout_mode = 0
 offset_right = 400.0
 offset_bottom = 60.0
 texture = ExtResource("1_18clv")
