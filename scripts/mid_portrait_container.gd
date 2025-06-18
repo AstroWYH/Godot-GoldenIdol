@@ -17,7 +17,7 @@ func update_container():
 
 	var portrait_data : Array = GDataPortrait.get_chapter_data(chapter)
 	for data in portrait_data:
-		var card := await create_portrait(data)
+		var card := create_portrait(data)
 
 func create_portrait(data : Dictionary) -> Control:
 	var card := GPreload.portrait_card_res.instantiate()

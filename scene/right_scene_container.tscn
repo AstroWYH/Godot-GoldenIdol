@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://df7qbo4p88m5o"]
+[gd_scene load_steps=3 format=3 uid="uid://df7qbo4p88m5o"]
 
+[ext_resource type="Script" uid="uid://2sq6dxluljtg" path="res://scripts/right_scene_container.gd" id="1_0cm36"]
 [ext_resource type="PackedScene" uid="uid://cen6qveyacao2" path="res://scene/right_scene_item.tscn" id="1_ju024"]
 
 [node name="RightSceneContainer" type="Control"]
@@ -7,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 871.0
+script = ExtResource("1_0cm36")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -16,20 +18,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBox" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="RightSceneItem" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+[node name="RightSceneItem" parent="ScrollContainer/VBox" instance=ExtResource("1_ju024")]
 layout_mode = 2
 
-[node name="RightSceneItem2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+[node name="RightSceneItem2" parent="ScrollContainer/VBox" instance=ExtResource("1_ju024")]
 layout_mode = 2
 
-[node name="RightSceneItem3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+[node name="RightSceneItem3" parent="ScrollContainer/VBox" instance=ExtResource("1_ju024")]
 layout_mode = 2
 
-[node name="RightSceneItem4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+[node name="RightSceneItem4" parent="ScrollContainer/VBox" instance=ExtResource("1_ju024")]
 layout_mode = 2
 
-[node name="RightSceneItem5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+[node name="RightSceneItem5" parent="ScrollContainer/VBox" instance=ExtResource("1_ju024")]
 layout_mode = 2

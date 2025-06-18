@@ -9,12 +9,12 @@ var scene_data := {
 				{
 					"path": "res://asset/startup.png",
 					"size": Vector2(60, 60),
-					"position": Vector2(200, 120)
+					"position": Vector2(50, 10)
 				},
 				{
 					"path": "res://asset/phrase_red.png",
 					"size": Vector2(40, 40),
-					"position": Vector2(60, 300)
+					"position": Vector2(60, 50)
 				}
 			],
 			"text_blocks": {
@@ -72,13 +72,13 @@ var scene_data := {
 			"images": [
 				{
 					"path": "res://asset/startup.png",
-					"size": Vector2(80, 80),
-					"position": Vector2(150, 150)
+					"size": Vector2(30, 30),
+					"position": Vector2(25, 25)
 				},
 				{
 					"path": "res://asset/phrase_red.png",
 					"size": Vector2(30, 30),
-					"position": Vector2(300, 200)
+					"position": Vector2(60, 60)
 				}
 			],
 			"text_blocks": {
