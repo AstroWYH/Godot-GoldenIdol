@@ -23,20 +23,16 @@ columns = 3
 
 [node name="PortaitCard" parent="Gird" instance=ExtResource("1_t6ls1")]
 layout_mode = 2
-size_flags_horizontal = 1
 alignment = 0
 
 [node name="PortaitCard2" parent="Gird" instance=ExtResource("1_t6ls1")]
 layout_mode = 2
-size_flags_horizontal = 1
 alignment = 0
 
 [node name="PortaitCard3" parent="Gird" instance=ExtResource("1_t6ls1")]
 layout_mode = 2
-size_flags_horizontal = 1
 alignment = 0
 
 [node name="PortaitCard4" parent="Gird" instance=ExtResource("1_t6ls1")]
 layout_mode = 2
-size_flags_horizontal = 1
 alignment = 0

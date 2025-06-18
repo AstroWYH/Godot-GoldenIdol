@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://df7qbo4p88m5o"]
+
+[ext_resource type="PackedScene" uid="uid://cen6qveyacao2" path="res://scene/right_scene_item.tscn" id="1_ju024"]
+
+[node name="RightSceneContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 871.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="RightSceneItem" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+layout_mode = 2
+
+[node name="RightSceneItem2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+layout_mode = 2
+
+[node name="RightSceneItem3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+layout_mode = 2
+
+[node name="RightSceneItem4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+layout_mode = 2
+
+[node name="RightSceneItem5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_ju024")]
+layout_mode = 2

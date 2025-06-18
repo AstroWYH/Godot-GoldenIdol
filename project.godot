@@ -25,6 +25,7 @@ GPreload="*res://scripts/global/g_preload_path.gd"
 GDataClue="*res://scripts/global/g_data_clue.gd"
 GDataStory="*res://scripts/global/g_data_story.gd"
 GDataPortrait="*res://scripts/global/g_data_portrait.gd"
+GDataScene="*res://scripts/global/g_data_scene.gd"
 GGameUI="*res://scripts/global/g_game_ui.gd"
 
 [display]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://cen6qveyacao2"]
+
+[ext_resource type="Texture2D" uid="uid://cnr0to1rjnpmv" path="res://asset/startup.png" id="1_acfvu"]
+[ext_resource type="Texture2D" uid="uid://pcpuhm2e2bqs" path="res://asset/phrase_red.png" id="2_j27rl"]
+[ext_resource type="PackedScene" uid="uid://dp0y2be6x2u4w" path="res://scene/word_entry.tscn" id="3_j27rl"]
+
+[node name="MarginContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(640, 200)
+offset_right = 640.0
+offset_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.0156768, 0.203149, 0.190374, 1)
+
+[node name="ContentLayer" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ContentLayer"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 120.0
+offset_right = 260.0
+offset_bottom = 180.0
+texture = ExtResource("1_acfvu")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ContentLayer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 90.0
+offset_right = 123.0
+offset_bottom = 130.0
+texture = ExtResource("2_j27rl")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ContentLayer"]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 45.0
+offset_right = 625.0
+offset_bottom = 145.0
+bbcode_enabled = true
+text = "你是什么的"
+
+[node name="WordEntry" parent="ContentLayer" instance=ExtResource("3_j27rl")]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 140.0
+offset_right = 468.0
+offset_bottom = 180.0

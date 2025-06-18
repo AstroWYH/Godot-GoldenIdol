@@ -7,7 +7,6 @@
 [node name="PortraitCard" type="VBoxContainer"]
 offset_right = 120.0
 offset_bottom = 180.0
-size_flags_horizontal = 3
 theme_override_constants/separation = 5
 alignment = 1
 script = ExtResource("1_40fqk")
