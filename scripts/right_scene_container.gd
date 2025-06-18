@@ -50,7 +50,7 @@ func create_scene_item(data : Dictionary) -> Control:
 		var entry := GPreload.word_entry_res.instantiate()
 		entry.set_word_entry_info(entry_data.text, GEnum.EWordPlace.RightScene)
 		entry.position = entry_data.position
-		#entry.toggle_label_visibility(false) # 默认不展示 玩家匹配时展示
+		entry.toggle_label_visibility(false) # 默认不展示 玩家匹配时展示
 		item.content_layer.add_child(entry)
 
 	return item

@@ -14,7 +14,7 @@ class_name WaveLineEffect
 #var shader_material = preload("res://shader/wave_line.tres").duplicate()
 
 var bbcode = "mywave"
-static var b_enable : bool = false # 这必须是全局，否则外面没法设b_enable成功，属于godot的特性
+static var b_enable : bool = true # 这必须是全局，否则外面没法设b_enable成功，属于godot的特性
 
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 	if !b_enable:

@@ -7,7 +7,7 @@ var clues := {
 			"type": 1,
 			"clue_info": {
 				"zh": {
-					"text": "唉，[mywave][url=word://PERSON_2]摩根[/url][/mywave]先生，[mywave][url=word://PERSON_2]艾琳[/url][mywave]小姐说她看到他手上拿着[mywave][url=word://ITEM_1]酒杯[/url][/mywave]，有人在[mywave][url=word://PLACE_1]图书馆[/url][/mywave]发现了[mywave][url=word://ITEM_2]毒药瓶[/url][/mywave]，最后他还被看见出现在[mywave][url=word://PLACE_2]厨房[/url][/mywave]。",
+					"text": "唉，[mywave][url=word://PERSON_2]摩根[/url][/mywave]先生，[mywave][url=word://PERSON_2]艾琳[/url][/mywave]小姐说她看到他手上拿着[mywave][url=word://ITEM_1]酒杯[/url][/mywave]，有人在[mywave][url=word://PLACE_1]图书馆[/url][/mywave]发现了[mywave][url=word://ITEM_2]毒药瓶[/url][/mywave]，最后他还被看见出现在[mywave][url=word://PLACE_2]厨房[/url][/mywave]。",
 					"entries": {
 						"PERSON_1": "摩根",
 						"PERSON_2": "艾琳",
