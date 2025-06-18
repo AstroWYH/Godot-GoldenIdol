@@ -23,7 +23,6 @@ func _ready():
 	text.meta_clicked.connect(_on_meta_clicked)
 	text.text = clue_data.get('data').get("text")
 	var wave_effect = GPreload.wave_effect.new()
-	wave_effect.b_enable = true
 	text.install_effect(wave_effect)
 	text.set_meta_underline(false)
 

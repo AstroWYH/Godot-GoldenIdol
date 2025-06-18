@@ -25,7 +25,6 @@ func _ready():
 	for text_block in data.get("text_blocks"):
 		var text = RichTextLabel.new()
 		var wave_effect = GPreload.wave_effect.new()
-		wave_effect.b_enable = true
 		text.install_effect(wave_effect)
 		text.set_meta_underline(false)
 		text.bbcode_enabled = true
