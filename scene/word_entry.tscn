@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dp0y2be6x2u4w"]
 
 [ext_resource type="Script" uid="uid://b3pv7b8bjbxad" path="res://scripts/word_entry.gd" id="1_lofbt"]
-[ext_resource type="Theme" uid="uid://cd6xcm0r6ceqx" path="res://asset/btn_round.tres" id="2_3xf8u"]
+[ext_resource type="Theme" uid="uid://cd6xcm0r6ceqx" path="res://asset/res/btn_round.tres" id="2_3xf8u"]
 
 [node name="WordEntry" type="Button"]
 modulate = Color(0.277543, 0.739883, 0.743914, 1)

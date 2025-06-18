@@ -29,3 +29,4 @@ func _on_switch():
 		explore_panel.show()
 		explore_panel.position.y = explore_original_size.y
 		tween.tween_property(explore_panel, "position:y", 0.0, explore_animation_duration).set_ease(Tween.EASE_OUT)
+	GAudioMgr.play_click()

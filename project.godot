@@ -27,6 +27,7 @@ GDataStory="*res://scripts/global/g_data_story.gd"
 GDataPortrait="*res://scripts/global/g_data_portrait.gd"
 GDataScene="*res://scripts/global/g_data_scene.gd"
 GGameUI="*res://scripts/global/g_game_ui.gd"
+GAudioMgr="*res://scripts/global/g_audio_mgr.gd"
 
 [display]
 
