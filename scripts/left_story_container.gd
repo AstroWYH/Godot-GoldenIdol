@@ -44,7 +44,7 @@ func create_label(text: String) -> Label:
 func create_wordentry(key: String) -> Control:
 	var entry := GPreload.word_entry_res.instantiate()
 	var story_data: Dictionary = GDataStory.get_story_data(chapter)
-	var entry_info : String = story_data["entries"].get(key)
-	entry.set_word_entry_info(entry_info, GEnum.EWordPlace.LeftStory)
+	var text : String = story_data["entries"].get(key)
+	entry.set_word_entry_info(text, GEnum.EWordPlace.LeftStory)
 	entry.toggle_label_visibility(false) # 默认不展示 玩家匹配时展示
 	return entry

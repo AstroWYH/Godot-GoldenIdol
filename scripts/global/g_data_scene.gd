@@ -21,12 +21,12 @@ var scene_data := {
 				"zh": [
 					{
 						"text": "这是关键的一封信",
-						"size": Vector2(200, 100),
+						"size": Vector2(200, 20),
 						"position": Vector2(80, 40)
 					},
 					{
 						"text": "你是谁",
-						"size": Vector2(200, 100),
+						"size": Vector2(200, 60),
 						"position": Vector2(80, 140)
 					}
 				],
@@ -47,11 +47,11 @@ var scene_data := {
 				"zh": [
 					{
 						"text": "仆人甲",
-						"position": Vector2(80, 40)
+						"position": Vector2(80, 70)
 					},
 					{
 						"text": "红酒",
-						"position": Vector2(180, 40)
+						"position": Vector2(380, 80)
 					}
 				],
 				"en": [
@@ -101,7 +101,7 @@ var scene_data := {
 				"zh": [
 					{
 						"text": "图书馆",
-						"position": Vector2(100, 50)
+						"position": Vector2(100, 150)
 					}
 				],
 				"en": [

@@ -31,7 +31,7 @@ func _ready():
 		text.text = text_block.text
 		text.size = text_block.size
 		text.position = text_block.position
-		text.add_theme_font_size_override("normal_font_size", 24)
+		text.add_theme_font_size_override("normal_font_size", GSetting.clue_imge_and_text_font_size)
 		text.meta_clicked.connect(_on_meta_clicked)
 		content_layer.add_child(text)
 
