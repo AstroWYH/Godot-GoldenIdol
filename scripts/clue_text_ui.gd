@@ -1,11 +1,9 @@
-@tool
+#@tool
 extends ClueBaseUI
 class_name ClueTextUI
 
 @onready var text = %RichText
 var clicked_words := {}
-#var wave_effect = preload("res://scripts/wave_under_line_effect.gd").new()
-var wave_effect = preload("res://scripts/wave_line_effect.gd").new()
 
 func _ready():
 	content_layer = %ContentLayer
@@ -13,13 +11,21 @@ func _ready():
 	type = GEnum.EClueUIType.Text
 	super._ready()
 	super.set_clue_panel(clue_panel)
-	text.meta_clicked.connect(_on_meta_clicked)
-	# 波浪效果
-	text.install_effect(wave_effect)
-	text.text = clue_data.get('data').get("text")
+
 	mouse_filter = Control.MOUSE_FILTER_STOP  # 必须拦截事件
+	# 出现在鼠标位置
 	global_position = get_global_mouse_position()
+
+	# 添加红点
 	super.set_red_points()
+
+	# 富文本红色波浪效果
+	text.meta_clicked.connect(_on_meta_clicked)
+	text.text = clue_data.get('data').get("text")
+	var wave_effect = GPreload.wave_effect.new()
+	wave_effect.b_enable = true
+	text.install_effect(wave_effect)
+	text.set_meta_underline(false)
 
 # 获取点击的词条
 func _on_meta_clicked(meta):

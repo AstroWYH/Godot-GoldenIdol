@@ -7,7 +7,7 @@ var clues := {
 			"type": 1,
 			"clue_info": {
 				"zh": {
-					"text": "唉，[wave][url=word://PERSON_1]摩根[/url][/wave]先生，[wave][url=word://PERSON_2]艾琳[/url][/wave]小姐说她看到他手上拿着[wave][url=word://ITEM_1]酒杯[/url][/wave]，有人在[wave][url=word://PLACE_1]图书馆[/url][/wave]发现了[wave][url=word://ITEM_2]毒药瓶[/url][/wave]，最后他还被看见出现在[wave][url=word://PLACE_2]厨房[/url][/wave]。",
+					"text": "唉，[mywave]摩根[/mywave]先生，[url=word://PERSON_2]艾琳[/url]小姐说她看到他手上拿着[mywave][url=word://ITEM_1]酒杯[/url][/mywave]，有人在[mywave][url=word://PLACE_1]图书馆[/url][/mywave]发现了[mywave][url=word://ITEM_2]毒药瓶[/url][/mywave]，最后他还被看见出现在[mywave][url=word://PLACE_2]厨房[/url][/mywave]。",
 					"entries": {
 						"PERSON_1": "摩根",
 						"PERSON_2": "艾琳",
@@ -18,7 +18,7 @@ var clues := {
 					}
 				},
 				"en": {
-					"text": "Ah, [wave][url=word://PERSON_1]Morgan[/url][/wave], I didn't expect it would come to this. Miss [wave][url=word://PERSON_2]Irene[/url][/wave] said she saw him holding a [wave][url=word://ITEM_1]wine glass[/url][/wave], and someone found a [wave][url=word://ITEM_2]poison bottle[/url][/wave] in the [wave][url=word://PLACE_1]library[/url][/wave]. He was last seen in the [wave][url=word://PLACE_2]kitchen[/url][/wave].",
+					"text": "Ah, [mywave][url=word://PERSON_1]Morgan[/url][/mywave], I didn't expect it would come to this. Miss [mywave][url=word://PERSON_2]Irene[/url][/mywave] said she saw him holding a [mywave][url=word://ITEM_1]wine glass[/url][/mywave], and someone found a [mywave][url=word://ITEM_2]poison bottle[/url][/mywave] in the [mywave][url=word://PLACE_1]library[/url][/mywave]. He was last seen in the [mywave][url=word://PLACE_2]kitchen[/url][/mywave].",
 					"entries": {
 						"PERSON_1": "Morgan",
 						"PERSON_2": "Irene",
@@ -110,7 +110,7 @@ var clues := {
 					],
 					"text_blocks": [
 						{
-							"text": "这是关键的一封信，[wave][url=word://ITEM_3]密信[/url][/wave]的内容可能揭示了真相。",
+							"text": "这是关键的一封信，[mywave][url=word://ITEM_3]密信[/url][/mywave]的内容可能揭示了真相。",
 							"size": Vector2(200, 100),
 							"position": Vector2(80, 40)
 						}
@@ -134,7 +134,7 @@ var clues := {
 					],
 					"text_blocks": [
 						{
-							"text": "This is a crucial letter. The content of the [wave][url=word://ITEM_3]secret note[/url][/wave] may reveal the truth.",
+							"text": "This is a crucial letter. The content of the [mywave][url=word://ITEM_3]secret note[/url][/mywave] may reveal the truth.",
 							"size": Vector2(200, 100),
 							"position": Vector2(80, 40)
 						}

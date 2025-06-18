@@ -23,14 +23,18 @@ func _ready():
 
 	# 添加文本块
 	for text_block in data.get("text_blocks"):
-		var label = RichTextLabel.new()
-		label.bbcode_enabled = true
-		label.text = text_block.text
-		label.size = text_block.size
-		label.position = text_block.position
-		label.add_theme_font_size_override("normal_font_size", 24)
-		label.meta_clicked.connect(_on_meta_clicked)
-		content_layer.add_child(label)
+		var text = RichTextLabel.new()
+		var wave_effect = GPreload.wave_effect.new()
+		wave_effect.b_enable = true
+		text.install_effect(wave_effect)
+		text.set_meta_underline(false)
+		text.bbcode_enabled = true
+		text.text = text_block.text
+		text.size = text_block.size
+		text.position = text_block.position
+		text.add_theme_font_size_override("normal_font_size", 24)
+		text.meta_clicked.connect(_on_meta_clicked)
+		content_layer.add_child(text)
 
 	## 添加红点
 	super.set_red_points()
