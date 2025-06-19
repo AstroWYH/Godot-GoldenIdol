@@ -1,19 +1,21 @@
 extends Node
 
-var sfx_player: AudioStreamPlayer
 var bgm_player: AudioStreamPlayer
+var se_player: AudioStreamPlayer
 
 func _ready():
-	sfx_player = AudioStreamPlayer.new()
+	se_player = AudioStreamPlayer.new()
 	bgm_player = AudioStreamPlayer.new()
-	add_child(sfx_player)
+	add_child(se_player)
 	add_child(bgm_player)
 
-func play_click():
-	sfx_player.stream = preload("res://asset/music/button_click.wav")
-	sfx_player.play()
-
-func play_bgm(path):
-	bgm_player.stream = preload("res://asset/music/intermission_machine_audio.ogg")
+# 背景音乐
+func play_bgm(chapter: int):
+	bgm_player.stream = GPreload.get_bgm_res(chapter)
 	bgm_player.loop = true
 	bgm_player.play()
+
+# 音效
+func play_se(type: String):
+	se_player.stream = GPreload.get_se_res(type)
+	se_player.play()
